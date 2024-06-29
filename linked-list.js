@@ -1,22 +1,11 @@
-class Node {
-    constructor(value) {
-        this.value = value;
-        this.next = null;
-    }
-}
+import { LlNode as Node } from "./nodes/ll-node";
 
-
-
-class LinkedList {
-
+export class LinkedList {
     constructor(value) {
         this.head = new Node(value);
         this.tail = this.head;
         this.length = 1;
     }
-
-
-
 
     push(value) {
         const node = new Node(value);
@@ -32,8 +21,6 @@ class LinkedList {
         this.length++;
         return this;
     }
-
-
 
     pop() {
         if (!this.head) return undefined;
@@ -58,8 +45,6 @@ class LinkedList {
         return temp;
     }
 
-
-
     unshift(value) {
         const node = new Node(value);
 
@@ -74,8 +59,6 @@ class LinkedList {
         this.length++;
         return this;
     }
-
-
 
     shift() {
         if (!this.head) return undefined;
@@ -93,8 +76,6 @@ class LinkedList {
         return temp;
     }
 
-
-
     get(index) {
         if (!this.length) return undefined;
         if (index < 0 || index >= this.length) return undefined;
@@ -107,8 +88,6 @@ class LinkedList {
 
         return temp;
     }
-
-
 
     set(value, index) {
         if (index < 0 || index >= this.length) return undefined;
