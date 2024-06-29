@@ -1,6 +1,6 @@
-import { DllNode as Node } from "./nodes/dll-node";
+const Node = require("./nodes/dll-node");
 
-export class DoublyLinkedList {
+class DoublyLinkedList {
     constructor(value) {
         this.head = new Node(value);
         this.tail = this.head;
@@ -133,3 +133,5 @@ export class DoublyLinkedList {
         return temp;
     }
 }
+
+module.exports = DoublyLinkedList;

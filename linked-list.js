@@ -1,6 +1,6 @@
-import { LlNode as Node } from "./nodes/ll-node";
+const Node = require("./nodes/ll-node");
 
-export class LinkedList {
+class LinkedList {
     constructor(value) {
         this.head = new Node(value);
         this.tail = this.head;
@@ -122,3 +122,5 @@ export class LinkedList {
         return after;
     }
 }
+
+module.exports = LinkedList;
